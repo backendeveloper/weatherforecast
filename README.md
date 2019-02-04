@@ -3,6 +3,8 @@
 
 ![screen shot 2018-03-02 at 8 41 40 pm](https://user-images.githubusercontent.com/14261123/36906412-df9c58f4-1e5b-11e8-8705-473bad078c1b.png)
 
+[![Build Status](https://travis-ci.com/backendeveloper/weatherforecast.svg?branch=master)](https://travis-ci.com/backendeveloper/weatherforecast)
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
