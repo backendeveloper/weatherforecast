@@ -1,19 +1,25 @@
 sudo: required
 addons:
   chrome: stable
-
+services:
+- docker
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - npm install -g @angular/cli
-
+- npm install -g @angular/cli
 script:
-  - ng build --prod --aot
-  - ng test
-  
+- ng build --prod --aot
+- ng test
+deploy:
+  provider: gae
+  project: round-plating-230708
+  keyfile: gce.json
+  verbosity: debug
+  on: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_0e79061fef1d_key -iv $encrypted_0e79061fef1d_iv
+  -in gce.json.enc -out gce.json -d
