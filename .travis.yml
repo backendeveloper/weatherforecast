@@ -1,8 +1,6 @@
 sudo: required
 addons:
   chrome: stable
-services:
-- docker
 language: node_js
 node_js:
 - '8'
